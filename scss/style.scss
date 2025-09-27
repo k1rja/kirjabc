@@ -266,22 +266,22 @@ a{
 @media (min-width:600px){
     .header__top{
         .nav-center{
-            display:block;
+            display:flex;
         }
 
         .nav-right{
-        .contact-link{
-            display:inline-flex;
+            .contact-link{
+                display:inline-flex;
             }
 
             .burger{
                 display:none;
             }
-        }
-    }
 
-    .nav__dropdown{
-        display:none;
+            .nav__dropdown{
+                display:none;
+            }
+        }
     }
     
 
