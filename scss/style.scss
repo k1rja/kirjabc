@@ -24,6 +24,7 @@ main{
     flex:1 0 auto;
     padding-inline: clamp(16px, 5vw, 40px);
     padding-block: 12px;
+    padding-top:60px;
 }
 
 
@@ -125,6 +126,7 @@ a{
     
 
         .nav-right{
+            position: relative;
             justify-content:flex-end;
             display:flex;
             align-items:center;
@@ -139,7 +141,6 @@ a{
                 font-size:1.8rem;
                 line-height:1;
                 padding:6px;
-                color:c.$text;
                 background:none;
                 border:1px solid transparent;
                 border-radius:10px;
@@ -150,52 +151,68 @@ a{
                     box-shadow:0 0 12px rgba(c.$glow-1,.5);
                 }
             }
+
+            .nav__dropdown{
+                position: absolute;
+                display:none;
+                position:absolute;
+                left:0;
+                transform:translateX(-50%);
+                top:100%;
+                background:rgba(5,0,34,.96);
+                border:1px solid rgba(255,255,255,.08);
+                border-radius:14px;
+                padding:0;
+                margin-top:8px;
+                max-width: min(90vw, 340px);
+        
+                &.is-open{
+                    display:block;
+                }
+        
+                a{
+                    display:block;
+                    padding:12px 14px;
+                    border-radius:10px;
+                    text-decoration:none;
+                    color:c.$text;
+        
+                    &:hover{
+                        background:rgba(255,255,255,.06);
+                        color:c.$glow-1;
+                    }
+                }
+            }
         }
     }
 
-    .nav__dropdown{
-        display:none;
-        position:absolute;
-        left:50%;
-        transform:translateX(-50%);
-        top:100%;
-        background:rgba(5,0,34,.96);
-        border:1px solid rgba(255,255,255,.08);
-        border-radius:14px;
-        padding:0;
-        margin-top:8px;
+}
 
-        a{
-            display:block;
-            padding:12px 14px;
-            border-radius:10px;
-            text-decoration:none;
-            color:c.$text;
+.hero__container{
 
-            &:hover{
-                background:rgba(255,255,255,.06);
-                color:c.$glow-1;
-            }
+    .hero__title {
+        display: flex;
+        font-family: f.$font-septenary;
+        font-weight: 400;
+        font-style: normal;
+        overflow: hidden;   
+        white-space: nowrap;          
+        border-right: 3px solid c.$color-teritary;
+        width: 0;                   
+        animation: typing 2.5s steps(9, end) forwards, blink 0.7s step-end infinite;
+    }
 
-            &.is-open{
-                display:block;
-            }
-        }
+    .hero__tagline{
+        padding-top:60px;
+    }
+
+    .hero__ctas{
+        display: flex;
+        flex-direction: column;
+        padding-top:60px;
+        gap:40px;
     }
 }
-
-.hero__title {
-    font-family: f.$font-septenary;
-    font-weight: 400;
-    font-style: normal;
-
-    overflow: hidden;   
-    white-space: nowrap;          
-    border-right: 3px solid c.$color-teritary;
-    width: 0;                   
-    animation: typing 2.5s steps(9, end) forwards, blink 0.7s step-end infinite;
-}
-
 @keyframes typing {
     from { width: 0 }
     to   { width: 9.39ch }
@@ -209,13 +226,13 @@ a{
 .site-footer{
     display: flex;
     justify-content: space-between;
-    align-items:center;
     padding-inline: clamp(16px, 5vw, 40px);
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     margin-top: auto;
 
     .footer__links{
         display: flex;
+        flex-direction: column;
         gap: 20px;
 
         a{
@@ -255,17 +272,18 @@ a{
         .nav-right{
         .contact-link{
             display:inline-flex;
-        }
+            }
 
-        .burger{
-            display:none;
+            .burger{
+                display:none;
+            }
         }
-        }
+    }
 
     .nav__dropdown{
         display:none;
-        }
     }
+    
 
     .hero__container{
         text-align:center;
