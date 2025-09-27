@@ -1,6 +1,2 @@
-const burgerMenu = document.querySelector('.burger-menu');
-const topNav = document.querySelector('.nav__list');
-
-burgerMenu.addEventListener('click', () => {
-  topNav.classList.toggle('active');
-});
+function toggleMenu(){ document.querySelector('.nav__dropdown')?.classList.toggle('is-open'); }
+window.toggleMenu = toggleMenu;

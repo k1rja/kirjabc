@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIRJA B. C.</title>
-    <link rel="stylesheet" href="scss/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KIRJA B. C. · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/style.css" />
+  <script defer>
+    function toggleMenu(){ document.querySelector('.nav__dropdown')?.classList.toggle('is-open'); }
+    window.toggleMenu = toggleMenu;
+  </script>
 </head>
 <body>
-    <header>
-        <div class="header__top">
-            <button class="burger-menu" onclick="openNav(0)">☰</button>
-            <div id="burger__menu--list">
-                <a href="om.html">OM</a>
-                <a href="projekter.html">PROJEKTER</a>
-                <a href="kontakt.html">KONTAKT</a>
-            </div>
-            <div class="header__logo">
-                <a href="index.html" class="logo__link">
-                <div class="header__logo--name">KIRJA B. C.</div>
-                </a>
-            </div>
-            <nav>
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="om.html">OM</a></li>
-                    <li class="nav__item"><a href="projekter.html">PROJEKTER</a></li>
-                    <li class="nav__item"><a href="kontakt.html">KONTAKT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="contact__info">
-        <h1 class="contact__info--title">Jeg kan kontaktes her (emoji)</h1>
-        <p><strong>Mail:</strong>kbch67091@edu.ucl.dk</p>
-        <p><strong>Telefon:</strong>+45 2396 6932</p>
-        <a href="https://www.linkedin.com/in/kirja-banke-christensen-aa3407266" target="_blank" rel="noopener noreferrer" class="social__link--linkedin"><strong>LinkedIn</strong></a>
+
+  <header class="site-header">
+    <div class="header__top">
+      <a class="logo__link" href="/"><strong class="logo">KIRJA B. C.</strong></a>
+
+      <nav class="nav-center">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="om.html">Om mig</a></li>
+          <li class="nav__item"><a href="projekter.html">Projekter</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn btn--ghost contact-link" href="kontakt.html">Kontakt</a>
+        <button class="burger" aria-label="Åbn menu" onclick="toggleMenu()">☰</button>
+      </div>
     </div>
 
+    <!-- mobil dropdown -->
+    <div class="nav__dropdown">
+      <a href="om.html">Om mig</a>
+      <a href="projekter.html">Projekter</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </header>
 
-    <footer class="footer__container">
-        <div class="footer__logo">
-            <a href="index.html" class="logo__link">
-            <div class="footer__logo--name">© KIRJA B. C.</div>
-            </a>
-        </div>
-        <div class="footer__links">
-            <a href="https://www.linkedin.com/in/kirja-banke-christensen-aa3407266" target="_blank" rel="noopener noreferrer" class="social__link--linkedin">
-              <img src="images/li-logo.webp" alt="LinkedIn logo">
-            </a>
-            <a href="https://github.com/k1rja" target="_blank" rel="noopener noreferrer" class="social__link--github">
-                <img src="images/github-mark.webp" alt="GitHub logo">
-            </a>
-        </div>
+  <main>
+    <section class="hero container">
+      <h1 class="hero__title glow-text">PORTFOLIO</h1>
 
-    </footer>
-    
+      <figure class="hero__illustration">
+
+        <img src="images/illustration.svg" alt="Illustration til forsiden">
+      </figure>
+
+      <p class="hero__tagline">
+        Digitalt design · funktionel kode · content til SoMe
+      </p>
+
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="projekter.html">Se projekter</a>
+        <a class="btn btn--ghost" href="om.html">Om mig</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt" class="site-footer container">
+    <span>© KIRJA B. C.</span>
+    <div class="footer__links">
+      <a href="https://www.linkedin.com/in/kirja-banke-christensen-aa3407266" target="_blank">LinkedIn</a>
+      <a href="https://github.com/k1rja" target="_blank">GitHub</a>
+    </div>
+  </footer>
 </body>
 </html>

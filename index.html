@@ -1,99 +1,81 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIRJA B. C.</title>
-    <link rel="stylesheet" href="scss/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KIRJA BANKE · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/style.css"/>
+  <script src="main.js" defer></script>
 </head>
 <body>
-    <header>
+
+  <header class="site-header">
         <div class="header__top">
-            <div class="header__logo">
-                <a href="index.html" class="logo__link">
-                <div class="header__logo--name">KIRJA B. C.</div>
-                </a>
-            </div>
-            <nav>
-                <button class="burger-menu" onclick="openNav(0)">☰</button>
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="om.html">OM</a></li>
-                        <li class="nav__item"><a href="projekter.html">PROJEKTER</a></li>
-                        <li class="nav__item"><a href="kontakt.html">KONTAKT</a></li>
-                    </ul>
+            <a class="logo__link" href="index.html"><strong class="logo">kirja banke</strong></a>
+
+            <nav class="nav-center">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="om.html">om mig</a></li>
+                    <li class="nav__item"><a href="projekter.html">projekter</a></li>
+                </ul>
             </nav>
-        </div>
-    </header>
-    
-        <div class="homepage__picture">
-            <img src="images/me.JPG" alt="billede af Kirja, der kigger ligefrem og smiler">
-        </div>
-        <div class="homepage__introtext">
-            <h1 class="homepage__introtext--name">kirja.is()</h1>
-            <p class="homepage__introtext--description">//multimediedesignerstuderende med interesse for design og webudvikling</p>
-            <div class="homepage__introtext--links">
-                <a href="https://www.linkedin.com/in/kirja-banke-christensen-aa3407266" target="_blank" rel="noopener noreferrer" class="social__link--linkedin">
-                  <img src="images/li-logo.webp" alt="LinkedIn logo">
-                  <span class="social__text">LinkedIn</span>
-                </a>
-                <a href="https://github.com/k1rja" target="_blank" rel="noopener noreferrer" class="social__link--github">
-                    <img src="images/github-mark.webp" alt="GitHub logo">
-                    <span class="social__text">GitHub</span>
-                </a>
-            </div>
-        </div>
-        <div class="homepage__projects">
-            <p id="homepage__projects--selected">UDVALGTE PROJEKTER</p>
-            <div class="homepage__projects--items">
-                <h2 class="homepage__projects--title">(EMOJI) Eksamensprojekt 2. semester</h2>
-                <h3 class="homepage__projects--date">DATO</h3>
-                <p class="homepage__projects--description">
-                    Beskrivelse på projektet lalalalalalalalalalalalalal alalalalalalalalalaalalalalalalal alalalalalaalalalal
-                    lalalalalalalalalal lalalalalalalalalala lalalalalalla lalalalalalalal lalalalalala lalalalal
-                </p>
-                <a href="2semester.html" class="homepage__projects--link">Lær mere...</a>
-            </div>
 
-            <div class="homepage__projects--items">
-                <h2 class="homepage__projects--title">(EMOJI) Eksamensprojekt 1. semester</h2>
-                <h3 class="homepage__projects--date">DATO</h3>
-                <p class="homepage__projects--description">
-                    Beskrivelse på projektet lalalalalalalalalalalalalal alalalalalalalalalaalalalalalalal alalalalalaalalalal
-                    lalalalalalalalalal lalalalalalalalalala lalalalalalla lalalalalalalal lalalalalala lalalalal
-                </p>
-                <a href="1semester.html" class="homepage__projects--link">Lær mere...</a>
+            <div class="nav-right">
+                <a class="btn btn--ghost contact-link" href="kontakt.html">kontakt</a>
+                <button class="burger" aria-label="Åbn menu" onclick="toggleMenu()">☰</button>
             </div>
-
-            <div class="homepage__projects--items">
-                <h2 class="homepage__projects--title">(EMOJI) Denne portfolio</h2>
-                <h3 class="homepage__projects--date">DATO</h3>
-                <p class="homepage__projects--description">
-                    Beskrivelse på projektet lalalalalalalalalalalalalal alalalalalalalalalaalalalalalalal alalalalalaalalalal
-                    lalalalalalalalalal lalalalalalalalalala lalalalalalla lalalalalalalal lalalalalala lalalalal
-                </p>
-                <a href="denneportfolio.html" class="homepage__projects--link">Lær mere...</a>
-            </div>
-        </div>
-    <footer class="footer__container">
-        <div class="footer__logo">
-            <a href="index.html" class="logo__link">
-            <div class="footer__logo--name">© KIRJA B. C.</div>
-            </a>
-        </div>
-        <div class="footer__links">
-            <a href="https://www.linkedin.com/in/kirja-banke-christensen-aa3407266" target="_blank" rel="noopener noreferrer" class="social__link--linkedin">
-              <img src="images/li-logo.webp" alt="LinkedIn logo">
-            </a>
-            <a href="https://github.com/k1rja" target="_blank" rel="noopener noreferrer" class="social__link--github">
-                <img src="images/github-mark.webp" alt="GitHub logo">
-            </a>
         </div>
 
-    </footer>
-    
+        <!-- mobil dropdown -->
+        <div class="nav__dropdown">
+            <a href="om.html">om mig</a>
+            <a href="projekter.html">projekter</a>
+            <a href="kontakt.html">kontakt</a>
+        </div>
+  </header>
+
+  <main>
+    <section class="hero__container">
+      <h1 class="hero__title glow-text">portfolio</h1>
+
+      <p class="hero__tagline">
+        digitalt design · funktionel kode · content til sociale medier
+      </p>
+
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="projekter.html">se projekter</a>
+        <a class="btn btn--ghost" href="om.html">om mig</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© kirja banke</span>
+    <div class="footer__links">
+      <a href="https://www.linkedin.com/in/kirja-banke-christensen-aa3407266" target="_blank">linkedIn</a>
+      <a href="https://github.com/k1rja" target="_blank">gitHub</a>
+    </div>
+  </footer>
 </body>
 </html>
