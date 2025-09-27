@@ -11,7 +11,7 @@ body{
     color: c.$color-secondary;
     font-family: f.$font-primary;
     line-height: 1.5;
-    padding-inline: 16px;
+    padding-inline: 20px;
     max-width: 78ch;
     margin-inline: auto;
 }
@@ -19,53 +19,51 @@ body{
 a {
     color: c.$color-teritary;
     text-decoration: none;
-
-
-    &:hover, &:focus-visible{
-        color: c.$color-secondary;
-
-    }
 }
 
-.header__top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-inline: auto;
+header{
+    padding-block: 16px;
 
-        .header__logo{
-            .logo__link{
-                text-decoration: none;
 
-                .header__logo--name{
-                    font-weight: 700;
-                    letter-spacing: 0.03em;
-                    color: c.$color-secondary;
+    .header__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-inline: auto;
+
+            .header__logo{
+                .logo__link{
                     text-decoration: none;
+
+                    .header__logo--name{
+                        font-weight: 700;
+                        letter-spacing: 0.03em;
+                        color: c.$color-secondary;
+                        text-decoration: none;
+                    }
                 }
             }
-        }
-    
-        .burger-menu{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            position:fixed;
-            right:15px;
-            font-size:2.5rem;
-            background:none;
-            color:$color-secondary;
-            border:none;
-        }
+        
+            .burger-menu{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                position:fixed;
+                right:15px;
+                font-size:2.5rem;
+                background:none;
+                color: c.$color-secondary;
+                border:none;
+            }
 
-        .nav__list{
-            display:none;
-        }
+            .nav__list{
+                display:none;
+            }
+
+    }
 
 }
-
-
 
 .homepage__picture {
     img {
@@ -112,7 +110,7 @@ a {
             display: inline-block;
             position: relative;
         
-          .footer__links::after {
+          &:after {
             content: "";
             position: absolute;
             left: 0;
@@ -121,7 +119,7 @@ a {
             height:2px;
             transition: width 0.3s ease;
         
-                .footer__links:hover::after {
+                &:hover::after {
                     width: 100%;
                 }
             }
@@ -132,4 +130,14 @@ a {
         }
 
 }
+
+@media (min-width: 600px){
+
+    .burger-menu{
+        display: none;
+    }
+}
+
+
+
 
