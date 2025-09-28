@@ -48,6 +48,7 @@ a{
     &--primary{
         background:c.$glow-1;
         color:c.$color-primary;
+
         &:hover,&:focus-visible{
             box-shadow:0 0 18px c.$glow-1;
             }
@@ -57,6 +58,7 @@ a{
         border-color:rgba(c.$text,0.25);
         color:c.$text;
         background:rgba(255,255,255,0.02);
+
         &:hover,&:focus-visible{
             border-color:c.$glow-1;
             box-shadow:0 0 14px rgba(c.$glow-1,0.6);
@@ -73,7 +75,6 @@ a{
     width:100%;
     position:sticky;
     top:0;
-    backdrop-filter:saturate(140%) blur(6px);
 
     .header__top{
         display:flex;
@@ -113,7 +114,7 @@ a{
                 .nav__item a{
                     text-decoration:none;
                     color:c.$text;
-                    padding:6px 0;
+                    padding:6px 10px;
 
                     &:hover,&:focus-visible{
                         color:c.$glow-1;
@@ -134,10 +135,11 @@ a{
 
             .contact-link{
                 display:none;
+                color:c.$color-teritary;
             }
 
             .burger{
-                display:inline-flex;
+                display:flex;
                 font-size:1.8rem;
                 line-height:1;
                 padding:6px;
@@ -157,8 +159,8 @@ a{
                 display:none;
                 position:absolute;
                 left:0;
-                transform:translateX(-50%);
                 top:100%;
+                transform:translateX(-50%);
                 background:rgba(5,0,34,.96);
                 border:1px solid rgba(255,255,255,.08);
                 border-radius:14px;
@@ -178,7 +180,7 @@ a{
                     color:c.$text;
         
                     &:hover{
-                        background:rgba(255,255,255,.06);
+                        background:rgba(255,255,255,0.06);
                         color:c.$glow-1;
                     }
                 }
@@ -210,8 +212,16 @@ a{
         display: flex;
         flex-direction: column;
         padding-top:60px;
-        gap:40px;
+        gap:20px;
+        align-items: flex-start;
+
+        &.btn{
+            width:fit-content;
+            min-width: auto;
+        }
     }
+
+
 }
 @keyframes typing {
     from { width: 0 }
@@ -264,67 +274,76 @@ a{
 }
 
 @media (min-width:600px){
-    .header__top{
-        .nav-center{
-            display:flex;
-        }
-
-        .nav-right{
-            .contact-link{
-                display:inline-flex;
+    .site-header{
+        .header__top{
+            .nav-center{
+                display:flex;
             }
 
-            .burger{
-                display:none;
-            }
+            .nav-right{
+                .contact-link{
+                    display:inline-flex;
+                }
 
-            .nav__dropdown{
-                display:none;
+                .burger{
+                    display:none;
+                }
+
+                .nav__dropdown{
+                    display:none;
+                }
             }
         }
     }
-    
 
     .hero__container{
         text-align:center;
-    }
+    
 
-    .hero__title{
-        font-size:clamp(44px,14vw,140px);
-        letter-spacing:.02em;
-        margin:0 0 12px;
-    }
+        .hero__title{
+            font-size:clamp(44px,14vw,140px);
+            letter-spacing:.02em;
+            margin:0 0 12px;
+        }
 
-    .hero__tagline{
-        opacity:.9;
-        margin:0 0 14px;
-    }
+        .hero__tagline{
+            opacity:.9;
+            margin:0 0 14px;
+        }
 
-    .hero__ctas{
-        display:flex;
-        justify-content:center;
-        gap:12px;
-        flex-wrap:wrap;
+        .hero__ctas{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
     }
 }
 
 @media (min-width:1024px){
-    .hero{
-        text-align: left;
-        display: grid;
-        grid-template-columns: 1.2fr .8fr;
-        gap: 28px;
-        align-items:center;
+    .hero__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
 
         .hero__title{
             grid-column:1 / -1;
         }
+
         .hero__illustration{
             grid-column:2;
         }
-        .hero__tagline,.hero__ctas{
+
+        .hero__tagline{
             grid-column:1;
+        }
+
+        .hero__ctas{
+            grid-column: 1;
+
         }
     }
 
