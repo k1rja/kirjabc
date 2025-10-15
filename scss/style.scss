@@ -71,7 +71,7 @@ a{
     text-shadow:0 0 8px c.$glow-1,0 0 16px c.$glow-2
 }
 
-.site-header{
+.site--header{
     width:100%;
     position:sticky;
     top:0;
@@ -236,34 +236,6 @@ a{
     .hero__tagline{
         padding-top:60px;
     }
-
-    .about {
-        display: grid;
-        gap: clamp(24px, 3vw, 40px);
-        padding-top: 24px;
-    
-        &__picture {
-          width: 100%;
-          max-width: 1100px;
-          height: auto;
-          border-radius: 12px;
-        }
-    
-        &__lead {
-          max-width: 70ch;
-          opacity: .95;
-        }
-    
-        &__section-heading {
-          font-family: f.$font-septenary;
-          font-weight: 400;
-          font-size: clamp(22px, 2.4vw, 28px);
-          letter-spacing: .02em;
-          border-top: 6px solid c.$glow-1;
-          padding: 12px 0 35px 0;
-          width: min(100%, 1100px);
-        }
-      }
       
       .facts {
         display: grid;
@@ -273,19 +245,6 @@ a{
 
         .facts__hint:last-child{
             padding-bottom:20px;
-        }
-    }
-
-    .experience{
-        .experience__col{
-            .experience__heading{
-                padding-bottom:20px;
-            }
-            .experience__list {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                }
         }
     }
     
@@ -302,10 +261,53 @@ a{
             min-width: auto;
         }
     }
-
 }
 
-.site-footer{
+.experience {
+        display: grid;
+        gap: 28px;
+    }
+
+  .experience__col {
+        margin-top: 12px;
+    }
+
+  .experience__heading + .experience__heading {
+      padding-top: 20px;
+    }
+
+  .experience__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap:18px;
+    }
+            
+  .experience__item {
+      line-height: 1.4;
+    }
+            
+  .experience__time,
+  .experience__role,
+  .experience__org {
+        display: block;
+        text-align: center;
+    }
+            
+  .experience__role {
+        margin-top: 4px;
+        font-weight: 500;
+    }
+
+  .experience__org {
+        margin-top: 2px;
+        font-style: italic;
+    }
+
+
+
+.site--footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -356,7 +358,7 @@ a{
 }
 
 @media (min-width:600px){
-    .site-header{
+    .site--header{
         .header__top{
             .nav-center{
                 display:flex;
@@ -398,7 +400,7 @@ a{
         
         }
       
-        .site-footer{
+        .site--footer{
           .footer__links{
             justify-content: flex-end; 
           }
@@ -413,7 +415,7 @@ a{
         }
     }
 
-    .site-footer{
+    .site--footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -492,7 +494,7 @@ a{
         }
     }
 
-    .site-footer{
+    .site--footer{
         display:flex;
         justify-content:space-between;
         align-items:center;
