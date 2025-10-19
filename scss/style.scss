@@ -51,7 +51,7 @@ a{
 
         &:hover,&:focus-visible{
             box-shadow:0 0 18px c.$glow-1;
-            }
+        }
     }
 
     &--ghost{
@@ -215,21 +215,31 @@ a{
     animation:
         typing var(--dur, 2.4s) steps(var(--steps, 9), end) forwards,
         blink .7s step-end infinite;
-    }
+}
     
 
-    @keyframes typing{ to { width: var(--ch, 9ch); } }
+    @keyframes typing{ 
+        to { 
+            width: var(--ch, 9ch); 
+        } 
+    }
+
     @keyframes blink{
-    from, to { border-color: transparent; }
-    50%      { border-color: c.$color-teritary; }
+        from, to { 
+            border-color: transparent; 
+        }
+        50% { 
+            border-color: c.$color-teritary; 
+        }
     }
     
     .hero__title--projectes,
     .hero__title--contact{
-    display: block;
-    font-family: f.$font-septenary;
-    font-weight: 400;
+        display: block;
+        font-family: f.$font-septenary;
+        font-weight: 400;
     }
+
 
 .hero__tagline{
     padding-top:60px;
@@ -282,7 +292,7 @@ a{
         padding: 12px 0 35px 0;
         border: none;
     }
-  }
+}
 
 .ctas{
     display: flex;
@@ -394,6 +404,72 @@ a{
     }
 }
 
+.projects {
+    display: grid;
+    gap: 28px;             
+    margin-top: 12px;
+}
+  
+.box {
+    padding-top: 12px;
+
+    &:not(:first-child)::before {
+        content: "";
+        display: block;
+        height: 6px;
+        background: c.$glow-1;
+        opacity: .85;
+        border-radius: 4px;
+        margin: 0 0 16px 0;
+    }
+
+    &:last-child::after {
+        content: "";
+        display: block;
+        height: 6px;
+        background: c.$glow-1;
+        opacity: .85;
+        border-radius: 4px;
+        margin: 16px 0 0 0;
+    }
+}
+  
+.box .content {
+    display: grid;
+    gap: 12px;
+}
+  
+.box .content img,
+.box .content video {
+    display: block;
+    width: 100%;
+    height: auto;           
+    max-height: 70vh;        
+    object-fit: contain;  
+    border-radius: 8px;
+}
+  
+.box .text h2 {
+    color:c.$glow-1;
+    text-shadow:0 0 8px c.$glow-1,0 0 16px c.$glow-2;
+    margin: 0 0 6px;
+    line-height: 1.15;
+    font-weight: 400;   
+    font-style: normal;
+}
+  
+.box .text p {
+    margin: 0;
+    line-height: 1.5;
+    opacity: .95;
+}
+  
+  
+.left-box, .right-box {
+    background: transparent;
+    color: inherit;
+}
+
 .contact-details {
     margin-top: clamp(32px, 5vw, 60px);
     text-align: center;
@@ -413,12 +489,12 @@ a{
       font-weight: 500;
       transition: color 0.2s ease, text-shadow 0.2s ease;
   
-      &:hover,
-      &:focus-visible {
-        text-decoration: underline;
-        text-underline-offset: 2px;
-        text-shadow: 0 0 8px c.$glow-1, 0 0 16px rgba(c.$glow-1, 0.6);
-      }
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-shadow: 0 0 8px c.$glow-1, 0 0 16px rgba(c.$glow-1, 0.6);
+        }
     }
   }
 
@@ -502,15 +578,15 @@ a{
         align-items: center;
         text-align: center;
     
-      .hero__title {
-        font-size: clamp(60px, 10vw, 120px);
-      }
+        .hero__title {
+            font-size: clamp(60px, 10vw, 120px);
+        }
     
-      .hero__tagline {
-        margin-top: 24px;
-        font-size: clamp(16px, 1.8vw, 18px);
-        opacity: 0.9;
-      }
+        .hero__tagline {
+            margin-top: 24px;
+            font-size: clamp(16px, 1.8vw, 18px);
+            opacity: 0.9;
+        }
 
         .hero__ctas{
             display:flex;
@@ -533,6 +609,34 @@ a{
         gap:40px;
         justify-content: center;
     }
+
+    .box .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 28px;
+    }
+    
+    .left-box .content img,
+    .left-box .content video {
+        order: 1; 
+    }
+    
+    .left-box .content .text {
+        order: 2;
+        text-align: left;
+    }
+    
+    .right-box .content img,
+    .right-box .content video {
+        order: 2;
+    }
+    
+    .right-box .content .text {
+        order: 1;
+        text-align: right;
+    }
+
 
     .site-footer{
         display: flex;
