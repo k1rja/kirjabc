@@ -412,6 +412,7 @@ a{
   
 .box {
     padding-top: 12px;
+    border-radius: 4px;
 
     &:not(:first-child)::before {
         content: "";
@@ -615,6 +616,7 @@ a{
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 28px;
+        border-radius: 8px;
     }
     
     .left-box .content img,
