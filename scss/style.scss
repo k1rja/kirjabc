@@ -119,8 +119,13 @@ a{
 
                     &:hover,&:focus-visible{
                         color:c.$glow-1;
-                        text-decoration:underline;
-                        text-underline-offset:3px;
+                    }
+
+                    &.nav__link--active{
+                        border-bottom: 2px solid c.$glow-1;;
+                        padding-bottom: 2px;
+                        
+                        
                     }
                 }
             }        
@@ -423,9 +428,9 @@ a{
         display: block;
         height: 6px;
         background: c.$glow-1;
-        opacity: .85;
+        opacity: 0.85;
         border-radius: 4px;
-        margin: 0 0 16px 0;
+        margin-bottom:16px;
     }
 
     &:last-child::after {
@@ -433,11 +438,12 @@ a{
         display: block;
         height: 6px;
         background: c.$glow-1;
-        opacity: .85;
+        opacity: 0.85;
         border-radius: 4px;
-        margin: 16px 0 0 0;
+        margin-top:35px;
     }
 }
+
   
 .box .content {
     display: grid;
@@ -451,12 +457,18 @@ a{
     height: auto;           
     max-height: 70vh;        
     object-fit: contain;  
-    border-radius: 8px;
+    border-radius: 12px;
+    margin-top:20px;
+}
+
+.box .content video {
+    overflow: hidden;             
+    clip-path: inset(0 round 12px);    
 }
 
 .img-border{
     border: 3px solid #ffffff;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
   
@@ -508,6 +520,38 @@ a{
         }
     }
   }
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  
+  
+    .lightbox__content {
+        max-width: 90%;
+        max-height: 80%;
+    }
+  
+    .lightbox__content img,
+    .lightbox__content video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+  
+    .lightbox__close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: c.$glow-1, 0 0 16px rgba(c.$glow-1, 0.6);
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
 
 .site-footer{
     display: flex;
@@ -721,6 +765,15 @@ a{
             grid-column: 1;
 
         }
+    }
+
+    .about__picture{
+        width: 70vw;
+    }
+
+    .about__lead{
+        max-width: 75ch;
+        margin-inline: auto;
     }
 
     .site-footer{
