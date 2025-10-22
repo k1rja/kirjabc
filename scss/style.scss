@@ -275,7 +275,6 @@ a{
         max-width: 1100px;  
         height: auto;          
         max-inline-size: 100%;  
-        border-radius: 12px;
         margin: 0 auto;         
         object-fit: cover;
     }
@@ -417,11 +416,17 @@ a{
     display: grid;
     gap: 28px;             
     margin-top: 12px;
+    width: min(100%, 1100px);
+    margin-inline: auto;
 }
+
+:root {
+    --edge-pad: clamp(24px, 6vw, 60px);
+    --col-gap: clamp(20px, 3vw, 40px);
+  }
   
 .box {
     padding-top: 12px;
-    border-radius: 4px;
 
     &:not(:first-child)::before {
         content: "";
@@ -429,7 +434,6 @@ a{
         height: 6px;
         background: c.$glow-1;
         opacity: 0.85;
-        border-radius: 4px;
         margin-bottom:16px;
     }
 
@@ -439,7 +443,6 @@ a{
         height: 6px;
         background: c.$glow-1;
         opacity: 0.85;
-        border-radius: 4px;
         margin-top:35px;
     }
 }
@@ -457,20 +460,23 @@ a{
     height: auto;           
     max-height: 70vh;        
     object-fit: contain;  
-    border-radius: 12px;
     margin-top:20px;
 }
 
 .box .content video {
-    overflow: hidden;             
-    clip-path: inset(0 round 12px);    
+    overflow: hidden;            
 }
 
 .img-border{
     border: 3px solid #ffffff;
-    border-radius: 12px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
+
+.box .text{
+    display: grid;
+    gap: 12px;
+}
+
   
 .box .text h2 {
     color:c.$glow-1;
@@ -539,7 +545,6 @@ a{
     .lightbox__content video {
         width: 100%;
         height: auto;
-        border-radius: 10px;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     }
   
@@ -669,7 +674,6 @@ a{
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 28px;
-        border-radius: 8px;
     }
     
     .left-box .content img,
