@@ -530,32 +530,44 @@ a{
 .lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    display: none;
-    justify-content: center;
-    align-items: center;
+    background: rgba(0,0,0,.85);
+    display: none;             
+    justify-content: center;    
+    align-items: flex-start;   
+    overflow: auto;           
+    padding: 4rem 1rem 2rem;  
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
   
+    .lightbox.is-open {          
+        display: flex;
+    }
   
     .lightbox__content {
-        max-width: 90%;
-        max-height: 80%;
+     margin: 0 auto;
+        max-width: min(1100px, 90vw);
     }
   
     .lightbox__content img,
     .lightbox__content video {
-        width: 100%;
-        height: auto;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+     display: block;
+        max-width: 100%;
+        height: auto;             
+        box-shadow: 0 0 20px rgba(255,255,255,.2);
     }
   
+
     .lightbox__close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        color: c.$glow-1, 0 0 16px rgba(c.$glow-1, 0.6);
+        position: fixed;           
+        top: 16px;
+        right: 20px;
         font-size: 2rem;
         cursor: pointer;
-    }
+        color: c.$glow-1;
+        text-shadow: 0 0 16px rgba(c.$glow-1, .6);
+  }
+
 }
 
 .site-footer{
