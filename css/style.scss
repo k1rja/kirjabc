@@ -530,44 +530,47 @@ a{
 .lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.85);
-    display: none;             
-    justify-content: center;    
-    align-items: flex-start;   
-    overflow: auto;           
-    padding: 4rem 1rem 2rem;  
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
 
   
-    .lightbox.is-open {          
+    .lightbox.is-open {
         display: flex;
     }
   
     .lightbox__content {
-     margin: 0 auto;
-        max-width: min(1100px, 90vw);
+        max-width: 100vw;
+        max-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   
     .lightbox__content img,
     .lightbox__content video {
-     display: block;
+        width: auto;
+        height: auto;
         max-width: 100%;
-        height: auto;             
-        box-shadow: 0 0 20px rgba(255,255,255,.2);
+        max-height: 100vh;
+        object-fit: contain;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
     }
   
-
     .lightbox__close {
-        position: fixed;           
-        top: 16px;
-        right: 20px;
+        position: absolute;
+        top: 20px;
+        right: 30px;
         font-size: 2rem;
+        color: white;
         cursor: pointer;
-        color: c.$glow-1;
-        text-shadow: 0 0 16px rgba(c.$glow-1, .6);
-  }
-
+        z-index: 1001;
+        user-select: none;
+    }
 }
 
 .site-footer{
