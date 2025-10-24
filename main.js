@@ -17,15 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const lightboxContent = document.querySelector(".lightbox__content");
   const closeBtn = document.querySelector(".lightbox__close");
 
-  // Tilføj klik-event til hvert billede og video
+
   galleryItems.forEach(item => {
     item.addEventListener("click", () => {
-      lightbox.style.display = "flex"; // viser popup'en
+      lightbox.style.display = "flex"; 
 
       if (item.tagName === "IMG") {
         lightboxContent.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
       } else if (item.tagName === "VIDEO") {
-        // viser videoen med kontroller og autoplay
+
         lightboxContent.innerHTML = `
           <video src="${item.querySelector("source")?.src || item.src}" 
                  controls autoplay></video>`;
@@ -33,16 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Luk-knappen
   closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
     lightboxContent.innerHTML = "";
   });
 
-  // Luk ved klik udenfor indholdet
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
       lightbox.style.display = "none";
       lightboxContent.innerHTML = "";
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        document.querySelectorAll('.typewriter').forEach(el => el.classList.add('run'));
+      });
+    } else {
+
+      document.querySelectorAll('.typewriter').forEach(el => el.classList.add('run'));
     }
   });
