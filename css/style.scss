@@ -219,20 +219,21 @@ a{
     max-width: calc(var(--ch, 9ch) + 0.5ch);
     padding-right: 0.5ch;
     opacity: 0;
-  }
+}
+
   
-  .typewriter.run {
-    opacity: 1;
-    animation:
-      typing var(--dur, 2.4s) steps(var(--steps, 9), end) forwards,
-      blink 0.7s step-end infinite;
-  }
+.typewriter.run {
+opacity: 1;
+animation:
+    typing var(--dur, 2.4s) steps(var(--steps, 9), end) forwards,
+    blink 0.7s step-end infinite;
+}
   
   @keyframes typing {
     to {
       width: var(--ch, 9ch);
     }
-  }
+    }
   
   @keyframes blink {
     from, to {
@@ -241,14 +242,14 @@ a{
     50% {
       border-color: c.$color-teritary;
     }
-  }
-    
-    .hero__title--projectes,
-    .hero__title--contact{
-        display: block;
-        font-family: f.$font-septenary;
-        font-weight: 400;
     }
+    
+.hero__title--projectes,
+.hero__title--contact{
+    display: block;
+    font-family: f.$font-septenary;
+    font-weight: 400;
+}
 
 
 .hero__tagline{
