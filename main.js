@@ -65,10 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
  
-  const startTypewriter = () => $$('.typewriter').forEach(el => el.classList.add('run'));
-  if (document.fonts?.ready) {
-    document.fonts.ready.then(startTypewriter);
-  } else {
-    startTypewriter();
-  }
+  const startTypewriter = () =>
+    $$('.typewriter').forEach(el => el.classList.add('run'));
+
+  startTypewriter(); 
 });
